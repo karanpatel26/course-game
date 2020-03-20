@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Show from './show';
 import Login from './login';
 import Idscoreboard from './idscoreboard';
+import './studentDashboard.css'
 
 class StudentDashboard extends Component {
     constructor(props) {
@@ -10,7 +11,22 @@ class StudentDashboard extends Component {
         show_challenge : false,
         show_scoreboard : false,
         show_login : false,
-        show_review : false
+        show_review : false,
+        courses: [
+            {
+                name: 'Data structures',
+                prof: 'ahflishdv'
+            },
+            {
+                name: 'HPC',
+                prof: 'ahflishdv'
+            },
+            {
+                name: 'Comp Fin',
+                prof: 'ahflishdv'
+            },
+            
+        ]
       };
       this.id = props.id;
       this.level = props.level;
@@ -46,7 +62,7 @@ class StudentDashboard extends Component {
         }else if(this.state.show_scoreboard === true){
             return (
                 <Idscoreboard id={this.id} level={this.level}/>
-            );
+            ); 
         }else if(this.state.showl_ogin === true){
             return (
                 <Login />
@@ -55,15 +71,38 @@ class StudentDashboard extends Component {
             return ;
         }else{
             return (
-                <ul class="nav">
-                <li class="navItem"><a href="#" onClick={this.showScoreboard}>rva</a></li> 
-                <li class="navItem"><a href="#" onClick={this.showScoreboard}>Show scoreboard</a></li>
-                <li class="navItem"><a href="#" onClick={this.showChallenges}>Show challenges</a></li>
-                <li class="navItem"><a href="#" onClick={this.showScoreboard}>About Us</a></li>
-                <li class="navItem"><a href="#" onClick={this.showScoreboard}>Contact Us</a></li>
-                <li class="navItem"><a href="#" onClick={this.logout}>Logout</a></li>
-                </ul>
-                    
+                <div id='full'>
+                    <div>
+                        <ul id='top'>
+                            <li id='s1'><h1>Dashboard</h1></li>
+                            <li id='s2'>
+                                <p id='p1'>Karan Patel</p>
+                                <a id='p2' href='/' onClick={this.logout}>Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id='ma'>
+                        <div id='ce'>
+                            <h2>Courses</h2>
+                            <hr/>
+                            {this.state.courses.map((c, index) => (
+                            <div key={index} className='co'>
+                                <h2>{c.name}</h2>
+                                <h3>Prof : {c.prof}</h3>
+                            </div>))}
+                        </div>
+                        <div id='re'>
+                            <div>
+                                <ul>
+                                    <li>Rank=5</li>
+                                    <li>Level=6</li>
+                                </ul>
+                            </div>
+                            <button onClick={this.showChallenges}>Show Challenges</button><br/>
+                            <button onClick={this.showScoreboard}>Show Scoreboard</button>
+                        </div>
+                    </div>
+                </div>
             );
         }
     }

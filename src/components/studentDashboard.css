@@ -1,0 +1,95 @@
+#full{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#top {
+    list-style: none;
+    padding:0;
+    width: 99%;
+    margin: 0.5%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background-color: rgb(250, 77, 77);
+    border: 1px solid;
+
+}
+#top li {
+    display: inline-block;
+    height: 100%;
+}
+#s1{
+    margin-left: 1%;
+    text-align: left;
+    width: 74%;
+}
+#s2{
+    text-align: center;
+    width: 25%;
+}
+#ma{
+    display: flex;
+    list-style: none;
+    padding:0;
+    width: 99%;
+    margin: 0.5%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+#p2{
+    color: green;
+}
+#ce{
+    width: 74.75%;
+    background-color: rgb(250, 77, 77);
+    border: 1px solid;
+}
+#re{
+    margin-left: 0.5%;
+    width: 24.75%;
+    height: fit-content;
+    background-color: rgb(250, 77, 77);
+    border: 1px solid;
+}
+#re button{
+    width: 90%;
+    align: center;
+}
+#re ul{
+    padding: 0;
+    text-align: center;
+    list-style: none;
+}
+#tr{
+    display: flex;
+    padding: 0;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+#ce ul{
+    list-style: none;
+}
+.co{
+    margin: 1%;
+    background-color:rgb(217, 255, 0);
+    border: black 1px solid;
+    box-shadow: 3px 3px;
+}
+#p1,#p2{
+    margin: 0;
+}
+#tem1{
+    margin: 0;
+    background-color: red;
+}
+#tem2{
+    margin: 0;
+    background-color: blue;
+}
+#tem3{
+    background-color: green;
+}
+#tem4{
+    background-color: yellow;
+}
